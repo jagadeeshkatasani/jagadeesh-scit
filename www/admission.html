@@ -5,57 +5,44 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
+	
 
 	
 	
-	<title>SCIT Home</title> 
+	<title>About us</title> 
 </head> 
 
 <body > 
 <div data-role="page" style="background-image: url(res/splashscreen/loginbg.png);"  >
-
-	<div data-role="header" data-position="fixed">
-		<img src="res/splashscreen/topscreen.jpg" width="100%" height="150px" align="top" >
+	<style>
+	.header_bg{background-image:url('res/footermenu/footerbg.png');}
+	</style>
+	<div data-role="header" data-position="fixed" class="header_bg">
+		About Us
 	</div><!-- /header -->
 
 	<div data-role="content">	
-					<table cellspacing="0" cellpadding="0">
-						<tr>
-							<td>
-							<a href="aboutus.html"><img src="res/homeicons/aboutusicon.png" width="100px" height="100px" > </a>
-							</td>
-							<td>
-							<a href="programs.html"><img src="res/homeicons/programsicon.png" width="100px" height="100px" > </a>
-							</td>
-							<td>
-							<a href="admission.html"><img src="res/homeicons/admissionicon.png" width="100px" height="100px" > </a>
-							</td>
-						</tr>
-						<tr>
-							<td>
-							<a href="placements.html"><img src="res/homeicons/placementicon.png" width="100px" height="100px" > </a>
-							</td>
-							<td>
-							<a href="studentactivity.html"><img src="res/homeicons/studentactivitiesicon.png" width="100px" height="100px" > </a>
-							</td>
-							<td>
-							<a href="news.html"><img src="res/homeicons/newseventicon.png" width="100px" height="100px" > </a>
-							</td>
-						</tr>
-						<tr>
-							<td>
-							<a href="directory.html"><img src="res/homeicons/directoryicon.png" width="100px" height="100px" > </a>
-							</td>
-							<td>
-							<a href="maps.html"><img src="res/homeicons/mapicon.png" width="100px" height="100px" > </a>
-							</td>
-							<td>
-							<a href="contact.html"><img src="res/homeicons/reachusicon.png" width="100px" height="100px" > </a>
-							</td>
-						</tr>
+		<div id="images">
 
-					</table>
-
+		</div>
+			<script>
+					$.getJSON("http://evonixtech.com/ColegSCIT/getadmission.php",
+					        function(data){
+					          // alert("data :"+data);
+					           var linkid=1;
+					          $.each(data.admissions, function(i,item){
+					          linkid = linkid +1;
+								 $("#images").append("<div> <a href='#' id='childlink"+linkid+"'  ><img width='100' height='100' src='"+item.url_image+"'>"+ item.name+"</a></div>");
+					            var childlinkid= "childlink"+linkid;
+					            $("#"+childlinkid).click(function() {
+		      					window.plugins.childBrowser.showWebPage(item.description, {showLocationBar: false, showAddress: false, showNavigationBar: false});
+								});
+					          });
+					           
+					        });
+		        </script>
+		
+		
 
 	</div><!-- /content -->
 	<style>
@@ -71,6 +58,8 @@
 	</style>
 	<div data-role="footer" data-position="fixed" class="footer_bg" data-theme="h">
 		<div data-role="navbar" class="nav-glyphish-example" data-grid="d">
+				
+			<!-- 	<ul class="footermenu"  style="background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0, #AA0000), color-stop(1, #B93341));"> -->
 				<ul class="footermenu">
 				    <li><a href="index.html" id="chat" data-icon="custom" class="links">Home</a></li>
 					<li><a href="photos.html" id="email" data-icon="custom" class="links">Pics</a></li>
@@ -78,21 +67,15 @@
 					<li><a href="extras.html" id="beer" data-icon="custom" class="links">Extras</a></li>
 				</ul>
 		</div>
+		<!-- /navbar -->
+				<!-- 
+				source http://jquerymobile.com/demos/1.0a1/experiments/api-viewer/docs/jQuery.getJSON/index.html
+				 -->
 	</div><!-- /footer -->
-	
-	<script type="text/javascript" src="jquery-1.8.2.min.js"></script>
-	<script type="text/javascript" src="jquery.mobile-1.2.0.min.js"></script>
-
-	<link rel="stylesheet" href="jquery.mobile.fixedToolbar.polyfill.css">
-
-	<script type="text/javascript" src="jquery.mobile.fixedToolbar.polyfill.js"></script> 
-	<link rel="stylesheet" href="jquery.mobile-1.2.0.min.css">
-	<script src="phonegap.js"></script>
-	<script src="childbrowser.js"></script>
-	
-	
 
 </div><!-- /page -->
+
+
 
 </body>
 </html>		

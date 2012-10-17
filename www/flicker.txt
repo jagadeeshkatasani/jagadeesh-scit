@@ -1,0 +1,10 @@
+{
+    "code": "1001",
+    "about": [
+        {"id":"1","name":"Why SCIT?","description":"http:\/\/evonixtech.com\/ColegSCIT\/html_folder\/about.html","title":"aaaaaaaaaaaaaaaaaaaaaa.bbbbbb\r\ncccccccccc\r\nddddddddddddddddddddddddd","image_id":"http:\/\/evonixtech.com\/ColegSCIT\/icons\/About%20Us\/why%20scit.png","time":"2012-03-15 04:53:55"},
+        {"id":"2","name":"Awards & Accolades","description":"http:\/\/evonixtech.com\/ColegSCIT\/html_folder\/awards.html","title":"aaaaaaaaaaaaaaaaaaaaaa.bbbbbb\r\ncccccccccc\r\nddddddddddddddddddddddddd","image_id":"http:\/\/evonixtech.com\/ColegSCIT\/icons\/About%20Us\/awards%20and%20accolades.png","time":"2012-03-15 04:54:26"},
+        {"id":"3","name":"Faculty","description":"http:\/\/evonixtech.com\/ColegSCIT\/html_folder\/faculty.html","title":"aaaaaaaaaaaaaaaaaaaaaa.bbbbbb\r\ncccccccccc\r\nddddddddddddddddddddddddd","image_id":"http:\/\/evonixtech.com\/ColegSCIT\/icons\/About%20Us\/faculty.png","time":"2012-03-15 04:54:41"},
+        {"id":"4","name":"Management","description":"http:\/\/evonixtech.com\/ColegSCIT\/html_folder\/management.html","title":"aaaaaaaaaaaaaaaaaaaaaa.bbbbbb\r\ncccccccccc\r\nddddddddddddddddddddddddd","image_id":"http:\/\/evonixtech.com\/ColegSCIT\/icons\/About%20Us\/management.png","time":"2012-03-15 04:55:02"},
+        {"id":"5","name":"Collaborations","description":"http:\/\/evonixtech.com\/ColegSCIT\/html_folder\/collaboration.html","title":"aaaaaaaaaaaaaaaaaaaaaa.bbbbbb\r\ncccccccccc\r\nddddddddddddddddddddddddd","image_id":"http:\/\/evonixtech.com\/ColegSCIT\/icons\/About%20Us\/collaboration.png","time":"2012-03-15 04:55:21"}
+    ]
+}

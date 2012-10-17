@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="jquery.mobile.js"></script>
+
+	<link rel="stylesheet" href="jquery.mobile.fixedToolbar.polyfill.css">
+
+	<script type="text/javascript" src="jquery.mobile.fixedToolbar.polyfill.js"></script> 
+	<link rel="stylesheet" href="jquery.mobile.css">
+	<script src="phonegap.js"></script>
+<script src="childbrowser.js"></script>
+	
+      
+	</head>
+	<body >
+	<div data-role="page" style="background-image: url(res/splashscreen/login_bg.png);"  >
+
+		<div data-role="header" data-position="fixed">
+			<img src="res/splashscreen/top_screen.jpg" width="320px" height="100px" align="top" >
+		</div><!-- /header -->
+
+		<div data-role="content">
+		
+		<div id="images">
+
+		</div>
+<script>
+		
+			$.getJSON("flicker.txt",
+			        function(data){
+			          // alert("data :"+data);
+			           var linkid=1;
+			          $.each(data.about, function(i,item){
+			          linkid = linkid +1;
+			           // $("<img/>").attr("src", item.image_id).appendTo("#images");
+						// $("#images").append("<div> <a href='"+item.description+"'><img width='100' height='100' src='"+item.image_id+"'>"+ item.name+"</a></div>");
+						// $("#images").append('<div> <a href="#" onClick="window.plugins.childBrowser.showWebPage(http://www.google.com);" ><img width="100" height="100" src="'+item.image_id+'">'+ item.name+'</a></div>');
+						 $("#images").append("<div> <a href='#' id='childlink"+linkid+"'  ><img width='100' height='100' src='"+item.image_id+"'>"+ item.name+"</a></div>");
+						// $("#images").append("<div>").append( <a href='#'><img width='100' height='100' src='"+item.image_id+"'>"+ item.name+"</a></div>");
+			            var childlinkid= "childlink"+linkid;
+			            $("#"+childlinkid).click(function() {
+			            //alert("inside click"+childlinkid);
+			            //alert("url"+item.description);
+      					window.plugins.childBrowser.showWebPage(item.description);
+						});
+			          });
+			           
+			        });
+		        
+        </script>
+		<script>
+			function setiframeurl(showurl) {
+				//alert("inside setiframeurl()"+showurl);
+			
+			}
+		
+		</script>
+        
+      
+        <div id="aboutscit">
+       
+        </div>
+ <script>
+		
+$.getJSON("http://evonixtech.com/ColegSCIT/getlistabout.php",
+        function(data){
+          $.each(data.about, function(i,item){
+            $("<img/>").attr("src", item.image_id).appendTo("#aboutscit");
+            if ( i == 3 ) return false;
+          });
+        });		        
+        </script>
+        
+        
+
+        
+        
+        
+        	
+	
+		this is about us page
+		
+		
+		</div><!-- /content -->
+	<div data-role="footer" data-position="fixed" >
+		<p>Footer content goes here...</p>	
+	</div><!-- /footer -->
+
+</div><!-- /page -->
+<!-- 
+source http://jquerymobile.com/demos/1.0a1/experiments/api-viewer/docs/jQuery.getJSON/index.html
+ -->
+</body>
+</html>		

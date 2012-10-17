@@ -1,0 +1,87 @@
+<!DOCTYPE html> 
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	
+
+	
+	
+	<title>About us</title> 
+</head> 
+
+<body > 
+<div data-role="page" style="background-image: url(res/splashscreen/loginbg.png);"  >
+	<style>
+	.header_bg{background-image:url('res/footermenu/footerbg.png');}
+	</style>
+	<div data-role="header" data-position="fixed" class="header_bg">
+		About Us
+	</div><!-- /header -->
+
+	<div data-role="content">	
+		<div id="images">
+
+		</div>
+			<script>
+					$.getJSON("http://evonixtech.com/ColegSCIT/getlistabout.php",
+					        function(data){
+					          // alert("data :"+data);
+					           var linkid=1;
+					          $.each(data.about, function(i,item){
+					          linkid = linkid +1;
+					           // $("<img/>").attr("src", item.image_id).appendTo("#images");
+								// $("#images").append("<div> <a href='"+item.description+"'><img width='100' height='100' src='"+item.image_id+"'>"+ item.name+"</a></div>");
+								// $("#images").append('<div> <a href="#" onClick="window.plugins.childBrowser.showWebPage(http://www.google.com);" ><img width="100" height="100" src="'+item.image_id+'">'+ item.name+'</a></div>');
+								 $("#images").append("<div> <a href='#' id='childlink"+linkid+"'  ><img width='100' height='100' src='"+item.image_id+"'>"+ item.name+"</a></div>");
+								// $("#images").append("<div>").append( <a href='#'><img width='100' height='100' src='"+item.image_id+"'>"+ item.name+"</a></div>");
+					            var childlinkid= "childlink"+linkid;
+					            $("#"+childlinkid).click(function() {
+					            //alert("inside click"+childlinkid);
+					            //alert("url"+item.description);
+		      					window.plugins.childBrowser.showWebPage(item.description, {showLocationBar: false, showAddress: false, showNavigationBar: false});
+								});
+					          });
+					           
+					        });
+		        </script>
+		
+		
+
+	</div><!-- /content -->
+	<style>
+	    .nav-glyphish-example .footermenu li{width:25%;}	
+		.nav-glyphish-example .ui-btn .ui-btn-inner { padding-top: 40px !important; }
+		.nav-glyphish-example .ui-btn .ui-icon {  width: 30px!important; height: 30px!important; margin-left: -15px !important; box-shadow: none!important; -moz-box-shadow: none!important; -webkit-box-shadow: none!important; -webkit-border-radius: 0 !important; border-radius: 0 !important; }
+		#chat .ui-icon { background:  url(res/footermenu/bthomebar.png) 50% 50% no-repeat; background-size: 36px 32px; }
+		#email .ui-icon { background:  url(res/footermenu/btphotobar.png) 50% 50% no-repeat; background-size: 36px 32px;  }
+		#login .ui-icon { background:  url(res/footermenu/btvideobar.png) 50% 50% no-repeat;  background-size: 36px 32px; }
+		#beer .ui-icon { background:  url(res/footermenu/btsharebar.png) 50% 50% no-repeat;  background-size: 36px 32px; }	
+		.links{color:white;font-weight:bold;text-decoration:none;}
+		.footer_bg{background-image:url('res/footermenu/footerbg.png');}
+	</style>
+	<div data-role="footer" data-position="fixed" class="footer_bg" data-theme="h">
+		<div data-role="navbar" class="nav-glyphish-example" data-grid="d">
+				
+			<!-- 	<ul class="footermenu"  style="background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0, #AA0000), color-stop(1, #B93341));"> -->
+				<ul class="footermenu">
+				    <li><a href="index.html" id="chat" data-icon="custom" class="links">Home</a></li>
+					<li><a href="photos.html" id="email" data-icon="custom" class="links">Pics</a></li>
+					<li><a href="videos.html" id="login" data-icon="custom" class="links">Videos</a></li>
+					<li><a href="extras.html" id="beer" data-icon="custom" class="links">Extras</a></li>
+				</ul>
+		</div>
+		<!-- /navbar -->
+				<!-- 
+				source http://jquerymobile.com/demos/1.0a1/experiments/api-viewer/docs/jQuery.getJSON/index.html
+				 -->
+	</div><!-- /footer -->
+
+</div><!-- /page -->
+
+
+
+</body>
+</html>		

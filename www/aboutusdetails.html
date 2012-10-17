@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="jquery.mobile.js"></script>
+
+	<link rel="stylesheet" href="jquery.mobile.fixedToolbar.polyfill.css">
+
+	<script type="text/javascript" src="jquery.mobile.fixedToolbar.polyfill.js"></script> 
+	<link rel="stylesheet" href="jquery.mobile.css">
+	<script type="text/javascript" src="iframe.js"></script>
+<script src="phonegap.js"></script>
+<script src="childbrowser.js"></script>
+	 
+	
+      
+	</head>
+	<body >
+	<div data-role="page" style="background-image: url(res/splashscreen/login_bg.png);"  >
+
+		<div data-role="header" data-position="fixed">
+			<img src="res/splashscreen/top_screen.jpg" width="320px" height="100px" align="top" >
+		</div><!-- /header -->
+
+		<div data-role="content">
+		
+		<div id="images">
+
+		</div>
+		<script>
+			function setiframeurl(showurl) {
+				alert("inside setiframeurl()"+showurl);
+			
+			}
+		
+		</script>
+        <script>
+        $(document).ready(function () {
+ 			 var id = getUrlVars()["id"];
+ 			 $("#images").append("id value " +id);
+ 			// $("#urliframe").src=id;
+ 			window.plugins.childBrowser.showWebPage('http://www.google.com');
+ 			 
+ 			 
+		});
+        
+        
+        function getUrlVars() {
+		    var vars = [], hash;
+		    var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+		    for(var i = 0; i < hashes.length; i++)
+		    {
+		        hash = hashes[i].split('=');
+		        vars.push(hash[0]);
+		        vars[hash[0]] = hash[1];
+		    }
+		    return vars;
+		}
+        function fixiFrame () {
+		   if ((android) && (androidVersion > 3)) {
+		      iFrameContentHeight = document.getElementById('urliframe').contentDocument.body.offsetHeight;
+		      document.getElementById('urliframe').style.height = iFrameContentHeight + 'px';
+		   }
+		}
+
+        </script>
+        <a href="#" onclick="window.plugins.childBrowser.showWebPage('http://www.google.com');">Open Google.com in child browser</a>
+
+
+     
+        <iframe id="urliframe" src="http://www.google.com"  scrolling="no" frameborder="0" width="100%" height="100%" onLoad='fixiFrame();'></iframe>
+
+       child browser test
+        
+        
+        	
+	
+		
+		
+		
+		</div><!-- /content -->
+	<div data-role="footer" data-position="fixed" >
+		<p>Footer content goes here...</p>	
+	</div><!-- /footer -->
+</div><!-- /page -->
+<!-- 
+source http://jquerymobile.com/demos/1.0a1/experiments/api-viewer/docs/jQuery.getJSON/index.html
+child browser
+http://simonmacdonald.blogspot.in/2011/05/installing-childbrowser-plugin-on.html
+ -->
+</body>
+</html>		
