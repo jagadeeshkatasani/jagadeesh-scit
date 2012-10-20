@@ -4,13 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<style>
-	.header_bg{background-image:url('res/footermenu/footerbg.png');text-align:center;}
-	.zeropadding{
-		padding:0px;
-		margin:0px;
-	}
-	</style>
+	
 	
 
 	
@@ -20,13 +14,15 @@
 
 <body > 
 <div data-role="page" style="background-color: #FFFFFF;">
-	
+	<style>
+	.header_bg{background-image:url('res/footermenu/footerbg.png');text-align:center;}
+	</style>
 	<div data-role="header" data-position="fixed" class="header_bg">
 		About Us
 	</div><!-- /header -->
 
-	<div data-role="content" class='zeropadding'>	
-		<div id="images" class='zeropadding'>
+	<div data-role="content" style='padding:0px;margin:0px;'>	
+		<div id="images" style='border:2px solid red;padding:0;margin:0;'>
 
 		</div>
 			<script>
@@ -39,7 +35,7 @@
 					           // $("<img/>").attr("src", item.image_id).appendTo("#images");
 								// $("#images").append("<div> <a href='"+item.description+"'><img width='100' height='100' src='"+item.image_id+"'>"+ item.name+"</a></div>");
 								// $("#images").append('<div> <a href="#" onClick="window.plugins.childBrowser.showWebPage(http://www.google.com);" ><img width="100" height="100" src="'+item.image_id+'">'+ item.name+'</a></div>');
-								 $("#images").append("<div width='100%' style='border-bottom:1px solid gray;'> <a href='#' id='childlink"+linkid+"'  ><table style='width:95%;'><tr><td style='width:20%;'><img width='60' height='60' src='"+item.image_id+"'></td><td style='width:60%;color:black;font-weight:bold;'>"+ item.name+"</td><td style='width:12%;'><img align='right' src='res/footermenu/index_arrow.png' width='10' height='15'></td></tr></table></a></div>");
+								 $("#images").append("<div width='100%' style='border-bottom:1px solid gray;'> <a href='#' id='childlink"+linkid+"'  ><table style='width:95%;'><tr><td style='width:20%;'><img width='65' height='65' src='"+item.image_id+"'></td><td style='width:60%;color:black;font-weight:bold;'>"+ item.name+"</td><td style='width:12%;'><img align='right' src='res/footermenu/index_arrow.png' width='10' height='15'></td></tr></table></a></div>");
 								// $("#images").append("<div>").append( <a href='#'><img width='100' height='100' src='"+item.image_id+"'>"+ item.name+"</a></div>");
 					            var childlinkid= "childlink"+linkid;
 					            $("#"+childlinkid).click(function() {
