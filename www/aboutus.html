@@ -13,7 +13,7 @@
 </head> 
 
 <body > 
-<div data-role="page" style="background-color: #F9F9F9;">
+<div data-role="page" style="background-color: transparent;">
 	<style>
 	.header_bg{background-image:url('res/footermenu/footerbg.png');text-align:center;}
 	</style>
@@ -35,7 +35,7 @@
 					           // $("<img/>").attr("src", item.image_id).appendTo("#images");
 								// $("#images").append("<div> <a href='"+item.description+"'><img width='100' height='100' src='"+item.image_id+"'>"+ item.name+"</a></div>");
 								// $("#images").append('<div> <a href="#" onClick="window.plugins.childBrowser.showWebPage(http://www.google.com);" ><img width="100" height="100" src="'+item.image_id+'">'+ item.name+'</a></div>');
-								 $("#images").append("<div style='border-bottom:1px solid gray;'> <a href='#' id='childlink"+linkid+"'  ><table style='width:95%;'><tr><td style='width:20%;'><img width='80' height='80' src='"+item.image_id+"'></td><td style='width:60%;color:black;font-weight:bold;'>"+ item.name+"</td><td style='width:12%;'><img style='align:right;' src='res/footermenu/index_arrow.png' width='10' height='15'></td></tr></table></a></div>");
+								 $("#images").append("<div> <a href='#' id='childlink"+linkid+"'  ><table style='width:95%;'><tr><td style='width:20%;'><img width='80' height='80' src='"+item.image_id+"'></td><td style='width:60%;color:black;font-weight:bold;'>"+ item.name+"</td><td style='width:12%;'><img style='align:right;' src='res/footermenu/index_arrow.png' width='10' height='15'></td></tr></table></a></div><hr>");
 								// $("#images").append("<div>").append( <a href='#'><img width='100' height='100' src='"+item.image_id+"'>"+ item.name+"</a></div>");
 					            var childlinkid= "childlink"+linkid;
 					            $("#"+childlinkid).click(function() {
