@@ -15,10 +15,10 @@
 <body > 
 <div data-role="page" style="background-color: #FFFFFF;">
 	<style>
-	.header_bg{background-image:url('res/footermenu/footerbg.png');text-align:center;height:40px;padding-top:12px;}
+	.header_bg{background-image:url('res/footermenu/footerbg.png');text-align:center;height:40px;margin-top:10px;}
 	</style>
 	<div data-role="header" data-position="fixed" class="header_bg">
-		About Us
+		About SCIT
 	</div><!-- /header -->
 
 	<div data-role="content" style='padding:0px;margin:0px;'>	
@@ -35,7 +35,7 @@
 					           // $("<img/>").attr("src", item.image_id).appendTo("#images");
 								// $("#images").append("<div> <a href='"+item.description+"'><img width='100' height='100' src='"+item.image_id+"'>"+ item.name+"</a></div>");
 								// $("#images").append('<div> <a href="#" onClick="window.plugins.childBrowser.showWebPage(http://www.google.com);" ><img width="100" height="100" src="'+item.image_id+'">'+ item.name+'</a></div>');
-								 $("#images").append("<div width='100%' style='border-bottom:1px solid gray;'> <a href='#' id='childlink"+linkid+"'  ><table style='width:95%;'><tr><td style='width:20%;'><img width='65' height='65' src='"+item.image_id+"'></td><td style='width:60%;color:black;font-weight:bold;'>"+ item.name+"</td><td style='width:12%;'><img align='right' src='res/footermenu/index_arrow.png' width='10' height='15'></td></tr></table></a></div>");
+								 $("#images").append("<div width='100%' style='border-bottom:1px solid black;'> <a href='#' id='childlink"+linkid+"'  ><table style='width:95%;'><tr><td style='width:20%;'><img width='65' height='65' src='"+item.image_id+"'></td><td style='width:60%;color:black;font-weight:bold;'>"+ item.name+"</td><td style='width:12%;'><img align='right' src='res/footermenu/index_arrow.png' width='10' height='15'></td></tr></table></a></div>");
 								// $("#images").append("<div>").append( <a href='#'><img width='100' height='100' src='"+item.image_id+"'>"+ item.name+"</a></div>");
 					            var childlinkid= "childlink"+linkid;
 					            $("#"+childlinkid).click(function() {
@@ -60,7 +60,7 @@
 		#login .ui-icon { background:  url(res/footermenu/btvideobar.png) 50% 50% no-repeat;  background-size: 23px 20px; }
 		#beer .ui-icon { background:  url(res/footermenu/btsharebar.png) 50% 50% no-repeat;  background-size: 22px 20px; }	
 		.links{color:white;font-weight:bold;text-decoration:none;}
-		.footer_bg{background-image:url('res/footermenu/footerbg.png');height:40px;border:2px solid black;}
+		.footer_bg{background-image:url('res/footermenu/footerbg.png');height:40px;border:2px solid black;padding:0px;margin:0px;}
 	</style>
 	<div data-role="footer" data-position="fixed" class="footer_bg" data-theme="h">
 		<div data-role="navbar" class="nav-glyphish-example" data-grid="d">
