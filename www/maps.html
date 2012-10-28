@@ -28,17 +28,9 @@
 		</div>
 			
 			<script>
-					$.getJSON("http://evonixtech.com/ColegSCIT/html_folder/map_direction.html",
-					        function(data){
-					         	 var linkid=1;
-					         	 $.each(data.event, function(i,item){
-					         	 linkid = linkid +1;
-					           	 $("#images").append("<div width='100%'>"+ item.name+"</div>");
-							
-					          });
-					           
-					        });
-		        </script>
+					
+					$('#images').load('http://evonixtech.com/ColegSCIT/html_folder/map_direction.html');
+		    </script>
 		
 
 	</div><!-- /content -->
