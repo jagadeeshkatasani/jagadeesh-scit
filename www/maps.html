@@ -26,10 +26,19 @@
 		<div id="images" style='padding:0;margin:0;'>
 
 		</div>
+			
 			<script>
-		      			window.plugins.childBrowser.showWebPage("http://evonixtech.com/ColegSCIT/html_folder/map_direction.html", {showLocationBar: false, showAddress: false, showNavigationBar: false});
+					$.getJSON("http://evonixtech.com/ColegSCIT/html_folder/map_direction.html",
+					        function(data){
+					         	 var linkid=1;
+					         	 $.each(data.event, function(i,item){
+					         	 linkid = linkid +1;
+					           	 $("#images").append("<div width='100%'>"+ item.name+"</div>");
+							
+					          });
+					           
+					        });
 		        </script>
-		
 		
 
 	</div><!-- /content -->
