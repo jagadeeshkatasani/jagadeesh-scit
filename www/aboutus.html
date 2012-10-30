@@ -25,7 +25,7 @@
 	</div><!-- /header -->
 
 	<div data-role="content" style='padding:0px;margin:0px;'>	
-		<div id="images" style='padding:0;margin:0;'>
+		<div id="images" style='padding:0;margin:0;margin-left:5px;'>
 
 		</div>
 			<script>
@@ -46,6 +46,7 @@
 					            //alert("url"+item.description);
 		      					//window.plugins.childBrowser.showWebPage(item.description, {showLocationBar: false, showAddress: false, showNavigationBar: false});
 					            	//$('#images').load('http://evonixtech.com/ColegSCIT/html_folder/map_direction.html');
+					            	$('#header_title').text(item.name);
 					            	$('#images').load(item.description);					            	
 					            	//$("#images").append("'"+item.description+"'"+item.name+"'");
 					            	
