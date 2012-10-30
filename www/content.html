@@ -1,0 +1,85 @@
+<!DOCTYPE html> 
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script>
+	var qsParm = new Array();
+	var titlename="";
+	var pageurl="";
+	function qs() {
+		var query = window.location.search.substring(1);
+		var parms = query.split('&');
+		for (var i=0; i < parms.length; i++) {
+			var pos = parms[i].indexOf('=');
+			if (pos > 0) {
+				var key = parms[i].substring(0, pos);
+				var val = parms[i].substring(pos + 1);
+				qsParm[key] = val;
+			}
+		}
+		titlename=qsParm['titlename'];
+		pageurl=qsParm['pageurl'];
+	}
+	</script>
+	
+</head> 
+
+<body > 
+<div data-role="page" style="background-color: #FFFFFF;">
+	<style>
+	.header_bg{background-image:url('res/footermenu/footerbg.png');text-align:center;height:20px;padding-top:5px;}
+	
+	</style>
+	<div data-role="header" data-position="fixed" class="header_bg">
+		<div id="header_title">
+			
+		</div>
+	</div><!-- /header -->
+
+	<div data-role="content" style='padding:0px;margin:0px;margin-left:8px;'>	
+		<div id="images" style='padding:0;margin:0;'>
+
+		</div>
+			
+			<script>
+					$('#header_title').text(titlename);
+					$('#images').load('http://evonixtech.com/ColegSCIT/html_folder/map_direction.html');
+		    </script>
+		
+
+	</div><!-- /content -->
+	<style>
+		.nav-glyphish-example .footermenu{height:60px;}
+	    .nav-glyphish-example .footermenu li{width:25%;}	    
+		#chat .ui-icon { background:  url(res/footermenu/bthomebar.png) 50% 50% no-repeat; background-size: 21px 20px;}
+		#email .ui-icon { background:  url(res/footermenu/btphotobar.png) 50% 50% no-repeat; background-size: 26px 20px;}
+		#login .ui-icon { background:  url(res/footermenu/btvideobar.png) 50% 50% no-repeat;  background-size: 23px 20px;}
+		#beer .ui-icon { background:  url(res/footermenu/btsharebar.png) 50% 50% no-repeat;  background-size: 22px 20px;}	
+		.links{color:white;font-weight:bold;text-decoration:none;}
+		.footer_bg{background-image:url('res/footermenu/footerbg.png');height:60px;}
+	</style>
+	<div data-role="footer" data-position="fixed" class="footer_bg" data-theme="h">
+		<div data-role="navbar" class="nav-glyphish-example" data-grid="d">
+				
+			<!-- 	<ul class="footermenu"  style="background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0, #AA0000), color-stop(1, #B93341));"> -->
+				<ul class="footermenu">
+				    <li><a href="index.html" id="chat" data-icon="custom" class="links">Home</a></li>
+					<li><a href="photos.html" id="email" data-icon="custom" class="links">Pics</a></li>
+					<li><a href="videos.html" id="login" data-icon="custom" class="links">Videos</a></li>
+					<li><a href="extras.html" id="beer" data-icon="custom" class="links">Extras</a></li>
+				</ul>
+		</div>
+		<!-- /navbar -->
+				<!-- 
+				source http://jquerymobile.com/demos/1.0a1/experiments/api-viewer/docs/jQuery.getJSON/index.html
+				 -->
+	</div><!-- /footer -->
+
+</div><!-- /page -->
+
+
+
+</body>
+</html>		
