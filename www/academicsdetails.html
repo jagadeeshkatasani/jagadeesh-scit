@@ -27,11 +27,13 @@
 
 		</div>
 			<script>
-					var academicid=getUrlVars()["id"];
+					var academicid=getUrlVars()["id"];					
 			        //var jsonurl = "http://evonixtech.com/ColegSCIT/getdesacademics.php?id="+ academicid;
 			        var jsonurl = "http://evonixtech.com/ColegSCIT/getdesacademics.php?id=1";
 					$.getJSON(jsonurl,
 					        function(data){
+								alert("academicid :"+academicid);
+								alert("jsonurl :"+jsonurl);
 					          // alert("data :"+data);
 					          $.each(data.accademics, function(i,item){
 					          linkid = linkid +1;
