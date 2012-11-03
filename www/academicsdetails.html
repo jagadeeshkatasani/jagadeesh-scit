@@ -26,7 +26,8 @@
 
 		</div>
 			<script>
-			        var jsonurl = "http://evonixtech.com/ColegSCIT/getdesacademics.php?id="+ getUrlVars()['id'];
+					var academicid=getUrlVars()["id"];
+			        var jsonurl = "http://evonixtech.com/ColegSCIT/getdesacademics.php?id="+ academicid;
 					$.getJSON(jsonurl,
 					        function(data){
 					          // alert("data :"+data);
