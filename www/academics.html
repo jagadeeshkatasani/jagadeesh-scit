@@ -30,12 +30,12 @@
 			<script>
 					$.getJSON("http://evonixtech.com/ColegSCIT/getlistacademics.php",
 					        function(data){
-					          // alert("data :"+data);
+					          alert("data :"+data);
 					           var linkid=1;
 					          $.each(data.accademics, function(i,item){
 					          linkid = linkid +1;	
 					          
-								 $("#images").append("<div style='float:left;width:45%;height:35px;background-color: #A29CE9;text-align:center;padding:10px 3px 10px 3px;margin-left:4px;margin-bottom:5px;'> <a href='academicsdetails.html?id="+item.id+"' id='childlink"+linkid+"' style='color:black;font-size:18px;font-weight:bold;text-decoration:none;' >"+ item.name+"</a></div>");							 
+								 $("#images").append("<div style='float:left;width:46%;height:35px;background-color: #A29CE9;text-align:center;padding:5px 2px 5px 2px;margin-left:4px;'> <a href='academicsdetails.html?id="+item.id+"' id='childlink"+linkid+"' style='color:black;font-size:17px;font-weight:bold;text-decoration:none;' >"+ item.name+"</a></div>");							 
 					            var childlinkid= "childlink"+linkid;
 					            
 					          });
