@@ -33,8 +33,9 @@
 					           var linkid=1;
 					          $.each(data.academics, function(i,item){
 					          linkid = linkid +1;
-								 $("#images").append("<div> <a href='academicsdetails.html?id="+item.id+"' id='childlink"+linkid+"'  >"+ item.name+"</a></div>");
-					            var childlinkid= "childlink"+linkid;
+								 //$("#images").append("<div> <a href='academicsdetails.html?id="+item.id+"' id='childlink"+linkid+"'  >"+ item.name+"</a></div>");
+								 $("#images").append("<div>"+ item.name+"</div>");
+					            //var childlinkid= "childlink"+linkid;
 					          });
 					           
 					        });
