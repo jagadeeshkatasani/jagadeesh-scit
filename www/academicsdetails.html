@@ -27,7 +27,7 @@
 
 		</div>
 			<script>
-				var vars = [];
+				/* var vars = [];
 				function getUrlVars() {	
 					var hash;
 					var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
@@ -38,12 +38,16 @@
 						vars[hash[0]] = hash[1];
 					}
 					return vars;
+				} */
+				$.urlParam = function(name){
+				    var results = new RegExp('[\\?&amp;]' + name + '=([^&amp;#]*)').exec(window.location.href);
+				    return results[1] || 0;
 				}
 
 				
 				</script>
 			<script>
-					var academicid=getUrlVars()["id"];					
+					var academicid=$.urlParam('id');					
 	       			var jsonurl = "http://evonixtech.com/ColegSCIT/getdesacademics.php?id="+ academicid;
 			        //var jsonurl = "http://evonixtech.com/ColegSCIT/getdesacademics.php?id=1";
 			      	alert("academicid :"+academicid);
