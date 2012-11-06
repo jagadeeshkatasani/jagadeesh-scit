@@ -27,24 +27,6 @@
 
 		</div>
 			<script>
-					var academicid=getUrlVars()["id"];					
-			        //var jsonurl = "http://evonixtech.com/ColegSCIT/getdesacademics.php?id="+ academicid;
-			        var jsonurl = "http://evonixtech.com/ColegSCIT/getdesacademics.php?id=1";
-			      	alert("academicid :"+academicid);
-					alert("jsonurl :"+jsonurl);
-					/* $.getJSON(jsonurl,
-					        function(data){								
-					          // alert("data :"+data);
-					          $.each(data.accademics, function(i,item){
-					          linkid = linkid +1;
-							     //window.plugins.childBrowser.showWebPage(item.description, {showLocationBar: false, showAddress: false, showNavigationBar: false});
-							     $('#images').load(item.description);
-
-					          });
-					           
-					        }); */
-		        </script>
-				<script>
 				function getUrlVars() {
 					var vars = [], hash;
 					var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
@@ -59,6 +41,25 @@
 
 				
 				</script>
+			<script>
+					//var academicid=getUrlVars()["id"];					
+			        //var jsonurl = "http://evonixtech.com/ColegSCIT/getdesacademics.php?id="+ academicid;
+			        var jsonurl = "http://evonixtech.com/ColegSCIT/getdesacademics.php?id=1";
+			      	//alert("academicid :"+academicid);
+					alert("jsonurl :"+jsonurl);
+					/* $.getJSON(jsonurl,
+					        function(data){								
+					          // alert("data :"+data);
+					          $.each(data.accademics, function(i,item){
+					          linkid = linkid +1;
+							     //window.plugins.childBrowser.showWebPage(item.description, {showLocationBar: false, showAddress: false, showNavigationBar: false});
+							     $('#images').load(item.description);
+
+					          });
+					           
+					        }); */
+		        </script>
+				
 		
 		
 
