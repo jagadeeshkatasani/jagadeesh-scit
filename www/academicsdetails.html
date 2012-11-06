@@ -9,7 +9,7 @@
 
 	
 	
-	<title>Academics</title> 
+	<title>Academic Year</title> 
 </head> 
 
 <body > 
@@ -19,31 +19,46 @@
 	
 	</style>
 	<div data-role="header" data-position="fixed" class="header_bg">
-		Academics
+		Academic Year
 	</div><!-- /header -->
 
 	<div data-role="content">	
 		<div id="images">
 
 		</div>
-		
 			<script>
-					$.getJSON("http://evonixtech.com/ColegSCIT/getlistacademics.php",
-					        function(data){
-					          //alert("data :"+data);
-					           var linkid=1;
+					var academicid=getUrlVars()["id"];					
+			        //var jsonurl = "http://evonixtech.com/ColegSCIT/getdesacademics.php?id="+ academicid;
+			        var jsonurl = "http://evonixtech.com/ColegSCIT/getdesacademics.php?id=1";
+			      	alert("academicid :"+academicid);
+					alert("jsonurl :"+jsonurl);
+					/* $.getJSON(jsonurl,
+					        function(data){								
+					          // alert("data :"+data);
 					          $.each(data.accademics, function(i,item){
-					          linkid = linkid +1;	
-					          
-								//$("#images").append("<div style='float:left;width:47%;height:35px;background-color: #A29CE9;text-align:center;padding:5px 2px 5px 2px;margin-left:4px;'> <a href='academicsdetails.html?id="+item.id+"' id='childlink"+linkid+"' style='color:black;font-size:17px;font-weight:bold;text-decoration:none;padding-top:10px;' >"+ item.name+"</a></div>");
-								$("#images").append("<div style='float:left;width:47%;height:35px;background-color: #A29CE9;text-align:center;padding:5px 2px 5px 2px;margin-left:4px;'> <a href='academicsdetails.html'  style='color:black;font-size:17px;font-weight:bold;text-decoration:none;padding-top:10px;' >"+ item.name+"</a></div>");
-					            //var childlinkid= "childlink"+linkid;
-					            
+					          linkid = linkid +1;
+							     //window.plugins.childBrowser.showWebPage(item.description, {showLocationBar: false, showAddress: false, showNavigationBar: false});
+							     $('#images').load(item.description);
+
 					          });
 					           
-					        });
+					        }); */
+		        </script>
+				<script>
+				function getUrlVars() {
+					var vars = [], hash;
+					var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+					for(var i = 0; i < hashes.length; i++)
+					{
+						hash = hashes[i].split('=');
+						vars.push(hash[0]);
+						vars[hash[0]] = hash[1];
+					}
+					return vars;
+				}
 
-		        </script>		
+				
+				</script>
 		
 		
 
