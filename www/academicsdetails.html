@@ -53,9 +53,9 @@
 			        var jsonurl = "http://evonixtech.com/ColegSCIT/getdesacademics.php?id="+ academicid;
 			        //var jsonurl = "http://evonixtech.com/ColegSCIT/getdesacademics.php?id=1";
 			      	alert("academicid :"+academicid);
-					alert("jsonurl :"+jsonurl);
-					var url = $.url();
-					alert("URL :"+ url);
+					alert("jsonurl --:"+jsonurl);
+					var currentUrl = $.mobile.activePage.data('url');
+					alert("URL :"+ currentUrl);
 					/* $.getJSON(jsonurl,
 					        function(data){								
 					          // alert("data :"+data);
