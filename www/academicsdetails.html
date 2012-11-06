@@ -9,7 +9,7 @@
 
 	
 	
-	<title>Academics</title> 
+	<title>Academic Year</title> 
 </head> 
 
 <body > 
@@ -32,12 +32,13 @@
 			        var jsonurl = "http://evonixtech.com/ColegSCIT/getdesacademics.php?id=1";
 					$.getJSON(jsonurl,
 					        function(data){
-								alert("academicid :"+academicid);
-								alert("jsonurl :"+jsonurl);
+								//alert("academicid :"+academicid);
+								//alert("jsonurl :"+jsonurl);
 					          // alert("data :"+data);
 					          $.each(data.accademics, function(i,item){
 					          linkid = linkid +1;
-							     window.plugins.childBrowser.showWebPage(item.description, {showLocationBar: false, showAddress: false, showNavigationBar: false});
+							     //window.plugins.childBrowser.showWebPage(item.description, {showLocationBar: false, showAddress: false, showNavigationBar: false});
+							     $('#images').load(item.description);
 
 					          });
 					           
