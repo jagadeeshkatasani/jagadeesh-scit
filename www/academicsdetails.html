@@ -13,7 +13,10 @@
 	<link rel="stylesheet" href="jquery.mobile-1.2.0.min.css">
 	<script src="phonegap.js"></script>
 	<script src="childbrowser.js"></script>
-		
+	
+
+	
+	
 	<title>Academic Year</title> 
 </head> 
 
@@ -24,9 +27,7 @@
 	
 	</style>
 	<div data-role="header" data-position="fixed" class="header_bg">
-		<div id="header_title">
-			
-		</div>
+		Academic Year
 	</div><!-- /header -->
 
 	<div data-role="content">	
@@ -50,8 +51,7 @@
 			<script>
 			
 				$(document).ready(function () {
-					var academicid=getUrlVars()["yearid"];
-					var selectedyear=getUrlVars()["selectedyear"];
+					var academicid=getUrlVars()["yearid"];					
 			        var jsonurl = "http://evonixtech.com/ColegSCIT/getdesacademics.php?id="+ academicid;
 			        //var jsonurl = "http://evonixtech.com/ColegSCIT/getdesacademics.php?id=1";
 			      	//alert("academicid :"+academicid);
@@ -64,7 +64,6 @@
 					          $.each(data.accademics, function(i,item){
 					          //linkid = linkid +1;
 							     //window.plugins.childBrowser.showWebPage(item.description, {showLocationBar: false, showAddress: false, showNavigationBar: false});
-							     $('#header_title').text(selectedyear);
 							     $('#images').load(item.description);
 					          //alert("data :"+item.description);	
 								return false;
@@ -103,6 +102,8 @@
 	</div><!-- /footer -->
 
 </div><!-- /page -->
+
+
 
 </body>
 </html>		
