@@ -64,9 +64,9 @@
 					          $.each(data.accademics, function(i,item){
 					          //linkid = linkid +1;
 							     //window.plugins.childBrowser.showWebPage(item.description, {showLocationBar: false, showAddress: false, showNavigationBar: false});
-							     $('#images').append(item.description);
+							     $('#images').load(item.description);
 					          //alert("data :"+item.description);	
-
+								return false;
 					          });
 					           
 					        });
