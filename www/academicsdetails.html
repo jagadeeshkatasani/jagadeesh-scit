@@ -51,19 +51,14 @@
 			<script>
 			
 				$(document).ready(function () {
-					var academicid=getUrlVars()["yearid"];	
-					var year=getUrlVars()["year"];	
+					var academicid=getUrlVars()["yearid"];					
 			        var jsonurl = "http://evonixtech.com/ColegSCIT/getdesacademics.php?id="+ academicid;
 			        //var jsonurl = "http://evonixtech.com/ColegSCIT/getdesacademics.php?id=1";
-			      	alert("academicid :"+academicid);
+			      	//alert("academicid :"+academicid);
 					//alert("jsonurl --:"+jsonurl);
-					alert("year :"+year);
-					var currentUrl = $.mobile.activePage.data('url');
-					alert("URL :"+ currentUrl);
-					
-					
-					
-			    	/* $.getJSON(jsonurl,
+					//var currentUrl = $.mobile.activePage.data('url');
+					//alert("URL :"+ currentUrl);
+			    	$.getJSON(jsonurl,
 					        function(data){								
 					          // alert("data :"+data);					          
 					          $.each(data.accademics, function(i,item){
@@ -74,7 +69,7 @@
 								return false;
 					          });
 					           
-					        }); */
+					        });
 					
 				});
 					
@@ -88,10 +83,10 @@
 	<style>
 		.nav-glyphish-example .footermenu{height:50px;}
 	    .nav-glyphish-example .footermenu li{width:25%;}	    
-		#chat .ui-icon { background:  url(res/footermenu/bthomebar.png) 50% 50% no-repeat; background-size: 21px 20px;background-color:none;}
-		#email .ui-icon { background:  url(res/footermenu/btphotobar.png) 50% 50% no-repeat; background-size: 26px 20px;background-color:none;}
-		#login .ui-icon { background:  url(res/footermenu/btvideobar.png) 50% 50% no-repeat;  background-size: 23px 20px;background-color:none;}
-		#beer .ui-icon { background:  url(res/footermenu/btsharebar.png) 50% 50% no-repeat;  background-size: 22px 20px;background-color:none;}	
+		#chat .ui-icon { background:  url(res/footermenu/bthomebar.png) 50% 50% no-repeat; background-size: 21px 20px;}
+		#email .ui-icon { background:  url(res/footermenu/btphotobar.png) 50% 50% no-repeat; background-size: 26px 20px;}
+		#login .ui-icon { background:  url(res/footermenu/btvideobar.png) 50% 50% no-repeat;  background-size: 23px 20px;}
+		#beer .ui-icon { background:  url(res/footermenu/btsharebar.png) 50% 50% no-repeat;  background-size: 22px 20px;}	
 		.links{color:white;font-weight:bold;text-decoration:none;}
 		.footer_bg{background-image:url('res/footermenu/footerbg.png');height:50px;}
 	</style>
