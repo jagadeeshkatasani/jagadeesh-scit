@@ -4,7 +4,16 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-		
+	<script type="text/javascript" src="jquery-1.8.2.min.js"></script>
+	<script type="text/javascript" src="jquery.mobile-1.2.0.min.js"></script>
+
+	<link rel="stylesheet" href="jquery.mobile.fixedToolbar.polyfill.css">
+
+	<script type="text/javascript" src="jquery.mobile.fixedToolbar.polyfill.js"></script> 
+	<link rel="stylesheet" href="jquery.mobile-1.2.0.min.css">
+	<script src="phonegap.js"></script>
+	<script src="childbrowser.js"></script>
+	
 	<title>About us</title> 
 </head> 
 
@@ -40,7 +49,7 @@
 					            $("#"+childlinkid).click(function() {
 					            //alert("inside click"+childlinkid);
 					            //alert("url"+item.description);
-		      					window.plugins.childBrowser.showWebPage(item.description, {showLocationBar: false, showAddress: false, showNavigationBar: false});
+		      					window.plugins.childBrowser.showWebPage(item.description, {showLocationBar: true, showAddress: true, showNavigationBar: false});
 					            	//$('#images').load('http://evonixtech.com/ColegSCIT/html_folder/map_direction.html');
 					            	//$('#header_title').text(item.name);
 					            	//$('#images').load(item.description);					            	
@@ -74,19 +83,6 @@
 				</ul>
 		</div>
 	</div><!-- /footer -->
-
-	
-	<script type="text/javascript" src="jquery-1.8.2.min.js"></script>
-	<script type="text/javascript" src="jquery.mobile-1.2.0.min.js"></script>
-
-	<link rel="stylesheet" href="jquery.mobile.fixedToolbar.polyfill.css">
-
-	<script type="text/javascript" src="jquery.mobile.fixedToolbar.polyfill.js"></script> 
-	<link rel="stylesheet" href="jquery.mobile-1.2.0.min.css">
-	<script src="phonegap.js"></script>
-	<script src="childbrowser.js"></script>
-	
-	
 
 </div><!-- /page -->
 
