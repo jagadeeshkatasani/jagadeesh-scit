@@ -47,7 +47,7 @@
 				</script>
 			<script>
 			
-				$(document).ready(function () {
+				//$(document).ready(function () {
 					var academicid=getUrlVars()["yearid"];					
 			        var jsonurl = "http://evonixtech.com/ColegSCIT/getdesacademics.php?id="+ academicid;
 			        //var jsonurl = "http://evonixtech.com/ColegSCIT/getdesacademics.php?id=1";
@@ -61,15 +61,15 @@
 					           var linkid=1;
 					          $.each(data.accademics, function(i,item){
 					          linkid = linkid +1;
-							     window.plugins.childBrowser.showWebPage(item.description, {showLocationBar: false, showAddress: false, showNavigationBar: false});
-							     //$('#images').load(item.description);
+							  //window.plugins.childBrowser.showWebPage(item.description, {showLocationBar: false, showAddress: false, showNavigationBar: false});
+							  $('#images').load(item.description);
 					          //alert("data :"+item.description);	
 								//return false;
 					          });
 					           
 					        });
 			    				    						
-				});
+				//});
 					
 				
 		        </script>
