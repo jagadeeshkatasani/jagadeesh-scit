@@ -57,17 +57,18 @@
 					//alert("URL :"+ currentUrl);
 			    	$.getJSON(jsonurl,
 					        function(data){								
-					          // alert("data :"+data);					          
+					          // alert("data :"+data);	
+					           var linkid=1;
 					          $.each(data.accademics, function(i,item){
-					          //linkid = linkid +1;
+					          linkid = linkid +1;
 							     //window.plugins.childBrowser.showWebPage(item.description, {showLocationBar: false, showAddress: false, showNavigationBar: false});
 							     $('#images').load(item.description);
 					          //alert("data :"+item.description);	
-								return false;
+								//return false;
 					          });
 					           
 					        });
-					
+			    				    						
 				});
 					
 				
