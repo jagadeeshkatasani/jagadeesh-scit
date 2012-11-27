@@ -40,7 +40,7 @@
 					            $("#"+childlinkid).click(function() {
 					            	var youtubeurl=item.url;
  					            	if(youtubeurl.indexOf("youtube") != -1){
- 					            		$('#images').load(item.url);
+ 					            		<embed src=""+youtubeurl type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="280" height="100%"></embed>
  					            	}else{
 					            		window.plugins.childBrowser.showWebPage(item.url, {showLocationBar: false, showAddress: false, showNavigationBar: false});
 					            	}
