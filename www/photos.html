@@ -27,6 +27,7 @@
 
 		</div>
 			<script>
+					showLoadingAnimation();
 					$.getJSON("http://evonixtech.com/ColegSCIT/getlistmenuimage.php",
 					        function(data){
 					          // alert("data :"+data);
@@ -40,7 +41,7 @@
 		      					window.plugins.childBrowser.showWebPage(item.url, {showLocationBar: false, showAddress: false, showNavigationBar: false});
 								});
 					          });
-					           
+					          dontShowLoadingAnimation();
 					        }); 
 					        
 					        
