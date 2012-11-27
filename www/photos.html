@@ -27,7 +27,7 @@
 
 		</div>
 			<script>
-					/* $.getJSON("http://evonixtech.com/ColegSCIT/getlistmenuimage.php",
+					$.getJSON("http://evonixtech.com/ColegSCIT/getlistmenuimage.php",
 					        function(data){
 					          // alert("data :"+data);
 					           var linkid=1;
@@ -41,25 +41,8 @@
 								});
 					          });
 					           
-					        }); */
-					        ////////////////////////////////
-					        $.ajax({
-					        	   url: 'http://evonixtech.com/ColegSCIT/getlistmenuimage.php',
-					        	   dataType: 'jsonp',
-					        	   success: function(data, status){
-					        		   var linkid=1;
-								          $.each(data.image, function(i,item){
-								          linkid = linkid +1;
-											 $("#images").append("<div style='float:left;margin-left:8px;'> <a href='#' id='childlink"+linkid+"'  ><img width='135' height='100' src='"+item.url+"'></a></div>");
-											 //no change
-								            var childlinkid= "childlink"+linkid;
-								            $("#"+childlinkid).click(function() {
-					      					window.plugins.childBrowser.showWebPage(item.url, {showLocationBar: false, showAddress: false, showNavigationBar: false});
-											});
-								          }); 
-					        	   }
-					        	});
-					        //////////////////////////////////
+					        }); 
+					        
 					        
 		        </script>
 		
