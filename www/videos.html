@@ -40,7 +40,10 @@
 					            $("#"+childlinkid).click(function() {
 					            	var youtubeurl=item.url;
  					            	if(youtubeurl.indexOf("youtube") != -1){
- 					            		<embed src=""+youtubeurl type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="280" height="100%"></embed>
+ 					            		<video width="320" height="240" controls="controls">
+ 					            		  <source src=""+youtubeurl type="video/mp4">
+ 					            		Your browser does not support the video tag.
+ 					            		</video>
  					            	}else{
 					            		window.plugins.childBrowser.showWebPage(item.url, {showLocationBar: false, showAddress: false, showNavigationBar: false});
 					            	}
