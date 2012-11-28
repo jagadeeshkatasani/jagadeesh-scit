@@ -24,11 +24,10 @@
 
 	<div data-role="content" style='padding:0px;margin:0px;'>	
 		<div id="images" style='padding:0;margin:0;margin-left:5px;'>
-			<div id="imgload">Loading...</div>
+			
 		</div>
 			<script>
-			$(document).ready(function () {
-				$("imgload").show('fast');
+			
 					$.getJSON("http://evonixtech.com/ColegSCIT/getlistmenuimage.php",
 					        function(data){
 					          // alert("data :"+data);
@@ -44,8 +43,7 @@
 					          });
 					          
 					        }); 
-					$("imgload").hide('1000');
-			});        
+					.success(function() { alert("success"); })
 					        
 		        </script>
 		
