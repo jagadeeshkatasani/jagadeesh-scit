@@ -38,7 +38,7 @@
 								$("#images").append("<div width='100%' style='border-bottom:1px solid black;height:40px;padding-top:8px;'> <a href='#' id='childlink"+linkid+"'  ><table style='width:95%;'><tr><td style='width:80%;color:black;font-weight:bold;font-size:18px;'>"+ item.name+"</td><td style='width:12%;'><img align='right' src='res/footermenu/index_arrow.png' width='10' height='15'></td></tr></table></a></div>");
 					            var childlinkid= "childlink"+linkid;
 					            $("#"+childlinkid).click(function() {
-					            	window.plugins.childBrowser.showWebPage(item.url, {showLocationBar: false, showAddress: false, showNavigationBar: false});
+					            	window.plugins.childBrowser.showWebPage(item.url, {showLocationBar: true, showAddress: true, showNavigationBar: true});
 					            	
 								});
 					          });
