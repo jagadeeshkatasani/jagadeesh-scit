@@ -14,7 +14,7 @@
     </author>
 
     <feature name="http://api.phonegap.com/1.0/device" />
-    <feature name="http://api.phonegap.com/1.0/media"/>
+    
 
     <preference name="phonegap-version" value="2.0.0" />
     <preference name="orientation"      value="portrait" />
@@ -47,5 +47,5 @@
     <gap:splash src="res/screen/ios/screen-ipad-landscape.png"     gap:platform="ios"     width="1024" height="768" />
     <gap:splash src="res/screen/windows-phone/screen-portrait.jpg" gap:platform="winphone" />
     <gap:plugin name="ChildBrowser" />
-    <access origin="*" />
+    <access origin="*"  browserOnly="true" />
 </widget>
