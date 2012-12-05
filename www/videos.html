@@ -24,9 +24,28 @@
 
 	<div data-role="content" style='padding:0px;margin:0px;'>	
 		<div id="images"  style='padding:0px;margin:0px;'>
-			<a href='http://www.youtube.com//watch?v=_xe8TmjS2jI'>kolaveri di</a>
+			
 		</div>
 			
+			<script>
+					$.getJSON("http://evonixtech.com/ColegSCIT/getlistvideo.php",
+					        function(data){
+					          // alert("data :"+data);
+					           var linkid=1;
+					          $.each(data.event, function(i,item){
+					          linkid = linkid +1;
+								 //$("#images").append("<div> <a href='#' id='childlink"+linkid+"'>"+ item.name+"</a></div>");
+								$("#images").append("<div width='100%' style='border-bottom:1px solid black;height:40px;padding-top:8px;'> <a href='#' id='childlink"+linkid+"'  ><table style='width:95%;'><tr><td style='width:80%;color:black;font-weight:bold;font-size:18px;'>"+ item.name+"</td><td style='width:12%;'><img align='right' src='res/footermenu/index_arrow.png' width='10' height='15'></td></tr></table></a></div>");
+					            var childlinkid= "childlink"+linkid;
+					            $("#"+childlinkid).click(function() {
+					            	//window.plugins.childBrowser.showWebPage(item.url, {showLocationBar: false, showAddress: false, showNavigationBar: false});
+					            	window.location.assign(item.url);
+					            	
+								});
+					          });
+					           
+					        });
+		        </script>
 						
 
 	</div><!-- /content -->
