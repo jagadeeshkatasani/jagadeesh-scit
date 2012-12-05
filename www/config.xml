@@ -13,13 +13,14 @@
         PhoneGap Team
     </author>
 
-    <feature name="http://api.phonegap.com/1.0/device" />
-    
+       
 
     <preference name="phonegap-version" value="2.0.0" />
     <preference name="orientation"      value="portrait" />
     <preference name="target-device"    value="universal" />
     <preference name="fullscreen"       value="false" />
+    
+    <feature name="http://api.phonegap.com/1.0/device" />
 
     <icon src="icon.png" />
     <icon src="res/icon/android/icon-36-ldpi.png"   gap:platform="android"    gap:density="ldpi" />
@@ -47,5 +48,5 @@
     <gap:splash src="res/screen/ios/screen-ipad-landscape.png"     gap:platform="ios"     width="1024" height="768" />
     <gap:splash src="res/screen/windows-phone/screen-portrait.jpg" gap:platform="winphone" />
     <gap:plugin name="ChildBrowser" />
-    <access origin="*"  browserOnly="true" />
+    <access origin="*" />
 </widget>
