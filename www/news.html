@@ -19,7 +19,9 @@
 	
 	</style>
 	<div data-role="header" data-position="fixed" class="header_bg">
+		<div id="headertitle">
 		News & Events
+		</div>
 	</div><!-- /header -->
 
 	<div data-role="content" style='padding:0px;margin:0px;'>	
@@ -40,9 +42,11 @@
 								// $("#images").append("<div>").append( <a href='#'><img width='100' height='100' src='"+item.image_id+"'>"+ item.name+"</a></div>");
 					            var childlinkid= "childlink"+linkid;
 					            $("#"+childlinkid).click(function() {
+					            	$("#images").text(item.description);
+					            	$("#headertitle").text(item.name);
 					            //alert("inside click"+childlinkid);
 					            //alert("url"+item.description);
-		      					window.plugins.childBrowser.showWebPage(item.url, {showLocationBar: false, showAddress: false, showNavigationBar: false});
+		      					//window.plugins.childBrowser.showWebPage(item.url, {showLocationBar: false, showAddress: false, showNavigationBar: false});
 								});
 					          });
 					           
