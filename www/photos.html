@@ -8,11 +8,11 @@
 				
 		$(document).bind("mobileinit", function(){
 		     $.mobile.defaultTransition = 'none';
-		     $("#images").hide();
-		     $("#loadinggif").show();
 		});
 	</script>
-		
+	
+
+	
 	
 	<title>Photos</title> 
 </head> 
@@ -27,8 +27,7 @@
 		Photos
 	</div><!-- /header -->
 
-	<div data-role="content" style='padding:0px;margin:0px;'>
-		<div id="loadinggif"><img width='332' height='332' src="res/footermenu/loading1.gif"></div>	
+	<div data-role="content" style='padding:0px;margin:0px;'>	
 		<div id="images" style='padding:0;margin:0;margin-left:5px;'>
 			
 		</div>
@@ -78,14 +77,7 @@
 
 </div><!-- /page -->
 
-<script>
-				
-		$(document).bind("pagecreate", function(){
-			$("#loadinggif").hide();
-		     $("#images").show();
-		     
-		});
-</script>
+
 
 </body>
 </html>		
