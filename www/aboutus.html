@@ -13,7 +13,12 @@
 	<link rel="stylesheet" href="jquery.mobile-1.2.0.min.css">
 	<script src="phonegap.js"></script>
 	<script src="childbrowser.js"></script>
-	
+	<script>
+				
+		$(document).bind("mobileinit", function(){
+		     $.mobile.defaultTransition = 'none';
+		});
+	</script>
 	<title>About us</title> 
 </head> 
 
@@ -34,11 +39,6 @@
 
 		</div>
 			<script>
-			
-		    $(document).bind("mobileinit", function(){
-		          $.mobile.defaultTransition = 'none';
-		    });
-			
 					$.getJSON("http://evonixtech.com/ColegSCIT/getlistabout.php",
 					        function(data){
 					          // alert("data :"+data);
@@ -48,7 +48,7 @@
 					           // $("<img/>").attr("src", item.image_id).appendTo("#images");
 								// $("#images").append("<div> <a href='"+item.description+"'><img width='100' height='100' src='"+item.image_id+"'>"+ item.name+"</a></div>");
 								// $("#images").append('<div> <a href="#" onClick="window.plugins.childBrowser.showWebPage(http://www.google.com);" ><img width="100" height="100" src="'+item.image_id+'">'+ item.name+'</a></div>');
-								 $("#images").append("<div width='100%' style='border-bottom:1px solid black;'> <a href='#' data-transition='none' id='childlink"+linkid+"' data-prefetch ><table style='width:95%;'><tr><td style='width:20%;'><img width='65' height='65' src='"+item.image_id+"'></td><td style='width:60%;color:black;font-weight:bold;'>"+ item.name+"</td><td style='width:12%;'><img align='right' src='res/footermenu/index_arrow.png' width='10' height='15'></td></tr></table></a></div>");
+								 $("#images").append("<div width='100%' style='border-bottom:1px solid black;'> <a href='#' id='childlink"+linkid+"'  ><table style='width:95%;'><tr><td style='width:20%;'><img width='65' height='65' src='"+item.image_id+"'></td><td style='width:60%;color:black;font-weight:bold;'>"+ item.name+"</td><td style='width:12%;'><img align='right' src='res/footermenu/index_arrow.png' width='10' height='15'></td></tr></table></a></div>");
 								// $("#images").append("<div>").append( <a href='#'><img width='100' height='100' src='"+item.image_id+"'>"+ item.name+"</a></div>");
 					            var childlinkid= "childlink"+linkid;
 					            $("#"+childlinkid).click(function() {

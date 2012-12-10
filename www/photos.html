@@ -4,7 +4,12 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	
+	<script>
+				
+		$(document).bind("mobileinit", function(){
+		     $.mobile.defaultTransition = 'none';
+		});
+	</script>
 	
 
 	
@@ -34,7 +39,7 @@
 					           var linkid=1;
 					          $.each(data.image, function(i,item){
 					          linkid = linkid +1;
-								 $("#images").append("<div style='float:left;margin-left:8px;'> <a href='#' id='childlink"+linkid+"' data-prefetch ><img width='135' height='100' src='"+item.url+"'></a></div>");
+								 $("#images").append("<div style='float:left;margin-left:8px;'> <a href='#' id='childlink"+linkid+"'  ><img width='135' height='100' src='"+item.url+"'></a></div>");
 								 //no change
 					            var childlinkid= "childlink"+linkid;
 					            $("#"+childlinkid).click(function() {
