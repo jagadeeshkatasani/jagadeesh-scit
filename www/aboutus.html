@@ -34,6 +34,11 @@
 
 		</div>
 			<script>
+			
+		    $(document).bind("mobileinit", function(){
+		          $.mobile.defaultTransition = 'none';
+		    });
+			
 					$.getJSON("http://evonixtech.com/ColegSCIT/getlistabout.php",
 					        function(data){
 					          // alert("data :"+data);
