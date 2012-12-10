@@ -8,13 +8,12 @@
 				
 		$(document).bind("mobileinit", function(){
 		     $.mobile.defaultTransition = 'none';
+		     $("#images").hide();
 		});
 	</script>
+		
 	
-
-	
-	
-	<title>About us</title> 
+	<title>Photos</title> 
 </head> 
 
 <body >
@@ -77,7 +76,12 @@
 
 </div><!-- /page -->
 
-
+<script>
+				
+		$(document).bind("pagecreate", function(){		     
+		     $("#images").show();
+		});
+</script>
 
 </body>
 </html>		
