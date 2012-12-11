@@ -31,7 +31,7 @@
 		<div id="images" style='padding:0;margin:0;margin-left:5px;'>
 			
 		</div>
-		<div id="loading">Please wait...</div>
+		<div id="loading" style='position:absolute;left:10px;top:150px;font-size:15px;'>Please wait...</div>
 			<script>
 			
 					$.getJSON("http://evonixtech.com/ColegSCIT/getlistmenuimage.php",
@@ -47,8 +47,8 @@
 		      					window.plugins.childBrowser.showWebPage(item.url, {showLocationBar: false, showAddress: false, showNavigationBar: false});
 								});
 					          });
-					          $("#loading").delay(10000).hide(0);
-					          //$("#loading").hide();
+					          
+					          $("#loading").hide();
 					        }); 
 										        
 		        </script>
