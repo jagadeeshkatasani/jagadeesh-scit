@@ -32,7 +32,7 @@
 			
 		</div>
 			<script>
-			function getempData(){
+			
 					$.getJSON("http://evonixtech.com/ColegSCIT/getlistmenuimage.php",
 					        function(data){
 					          // alert("data :"+data);
@@ -48,11 +48,6 @@
 					          });
 					          
 					        }); 
-					}
-					showSpinner('#images');
-			        setTimeout(function() {
-			        getempData();
-			        hidespinner();}, 1000);
 										        
 		        </script>
 		
