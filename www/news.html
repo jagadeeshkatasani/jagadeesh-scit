@@ -49,9 +49,9 @@
 								// $("#images").append("<div>").append( <a href='#'><img width='100' height='100' src='"+item.image_id+"'>"+ item.name+"</a></div>");
 					            var childlinkid= "childlink"+linkid;
 					            $("#"+childlinkid).click(function() {
-					            	$("#images").text(item.contentData);
-					            	$("#headertitle").text(item.title);
-					            //alert("inside click"+childlinkid);
+					            	//$("#images").text(item.contentData);
+					            	//$("#headertitle").text(item.title);
+					            alert(item.contentData);
 					            //alert("url"+item.description);
 		      					//window.plugins.childBrowser.showWebPage(item.url, {showLocationBar: false, showAddress: false, showNavigationBar: false});
 								});
