@@ -31,6 +31,7 @@
 		<div id="images" style='padding:0;margin:0;'>
 
 		</div>
+			<div id="loading" style='position:absolute;left:10px;top:150px;font-size:15px;'>Please wait...</div>
 			<script>
 					$.getJSON("http://evonixtech.com/ColegSCIT/getadmission.php",
 					        function(data){
@@ -50,7 +51,7 @@
 		      					window.plugins.childBrowser.showWebPage(item.description, {showLocationBar: false, showAddress: false, showNavigationBar: false});
 								});
 					          });
-					           
+					          $("#loading").hide();
 					        });
 		        </script>
 		
