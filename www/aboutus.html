@@ -55,8 +55,8 @@
 					           // $("<img/>").attr("src", item.image_id).appendTo("#images");
 								// $("#images").append("<div> <a href='"+item.description+"'><img width='100' height='100' src='"+item.image_id+"'>"+ item.name+"</a></div>");
 								// $("#images").append('<div> <a href="#" onClick="window.plugins.childBrowser.showWebPage(http://www.google.com);" ><img width="100" height="100" src="'+item.image_id+'">'+ item.name+'</a></div>');
-								 $("#images").append("<div width='100%' style='border-bottom:1px solid black;'> <a href='#' id='childlink"+linkid+"'  ><table style='width:95%;'><tr><td style='width:20%;'><img width='65' height='65' src='"+item.image_id+"'></td><td style='width:60%;color:black;font-weight:bold;'>"+ item.name+"</td><td style='width:12%;'><img align='right' src='res/footermenu/index_arrow.png' width='10' height='15'></td></tr></table></a></div>");
-								// $("#images").append("<div>").append( <a href='#'><img width='100' height='100' src='"+item.image_id+"'>"+ item.name+"</a></div>");
+								 //$("#images").append("<div width='100%' style='border-bottom:1px solid black;'> <a href='#' id='childlink"+linkid+"'  ><table style='width:95%;'><tr><td style='width:20%;'><img width='65' height='65' src='"+item.image_id+"'></td><td style='width:60%;color:black;font-weight:bold;'>"+ item.name+"</td><td style='width:12%;'><img align='right' src='res/footermenu/index_arrow.png' width='10' height='15'></td></tr></table></a></div>");
+								$("#images").append("<div width='100%' style='border-bottom:1px solid black;'> <a href='"+item.description+"' ><table style='width:95%;'><tr><td style='width:20%;'><img width='65' height='65' src='"+item.image_id+"'></td><td style='width:60%;color:black;font-weight:bold;'>"+ item.name+"</td><td style='width:12%;'><img align='right' src='res/footermenu/index_arrow.png' width='10' height='15'></td></tr></table></a></div>");
 					            var childlinkid= "childlink"+linkid;
 					            $("#"+childlinkid).click(function() {
 					            //alert("inside click"+childlinkid);
@@ -64,8 +64,7 @@
 		      					//window.plugins.childBrowser.showWebPage(item.description, {showLocationBar: false, showAddress: false, showNavigationBar: false});
 					            	//$('#images').load('http://evonixtech.com/ColegSCIT/html_folder/map_direction.html');
 					            	//$('#header_title').text(item.name);
-					            	//$('#images').load(item.description);
-					            	window.location(item.description);
+					            	//$('#images').load(item.description);					            	
 					            	
 								});
 					          });
