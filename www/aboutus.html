@@ -46,9 +46,12 @@
 		</div>
 		
 			<script>
+				$(document).ready(function(){
+					$('#images').text('Loading data ...'); 
 					 $.getJSON("http://evonixtech.com/ColegSCIT/getlistabout.php",
 					 //$.getJSON("http://colorsplash.in/android/ColegSCIT/getlistabout.php",
 					        function(data){
+					        	$('#images').empty();
 					          // alert("data :"+data);
 					           var linkid=1;
 					          $.each(data.about, function(i,item){
@@ -72,6 +75,7 @@
 					          });
 					          
 					        });
+				});
 		        </script>
 		
 		
