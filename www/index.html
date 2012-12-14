@@ -20,7 +20,7 @@
 </head> 
 
 <body > 
-<div data-role="page" style="background-image: url(res/splashscreen/loginbg.png);"  >
+<div data-role="page" id="homepage" style="background-image: url(res/splashscreen/loginbg.png);"  >
 
 	<div data-role="header" data-position="fixed">
 		<img src="res/splashscreen/topscreen.jpg" width="100%" height="150px" align="top" >
@@ -100,6 +100,26 @@
 	<link rel="stylesheet" href="jquery.mobile-1.2.0.min.css">
 	<script src="phonegap.js"></script>
 	<script src="childbrowser.js"></script>
+	<script>
+
+    document.addEventListener("deviceready", onDeviceReady, false);
+        function onDeviceReady()
+      {
+           // Add event listener to the back button
+          document.addEventListener("backbutton", backButtonHandler, false);
+
+       }
+
+       function backButtonHandler(e )
+       { 
+		if($.mobile.activePage.is('#homepage')){	  	
+        		navigator.app.exitApp();
+		}
+
+        }
+ 	  	
+ </script>
+
 	
 
 </div><!-- /page -->
