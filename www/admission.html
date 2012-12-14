@@ -11,12 +11,7 @@
 			//$.mobile.defaultPageTransition = 'none';
 		});
 	</script>
-	<style>
-	.ui-page {
-    -webkit-backface-visibility: hidden;
-	}
-	</style>
-
+	
 	
 	
 	<title>Admissions</title> 
@@ -38,8 +33,11 @@
 		</div>
 			
 			<script>
+				$(document).ready(function(){
+					$('#images').text('Loading data ...'); 
 					$.getJSON("http://evonixtech.com/ColegSCIT/getadmission.php",
 					        function(data){
+					        	$('#images').empty();
 					          // alert("data :"+data);
 					           var linkid=1;
 					          $.each(data.admissions, function(i,item){
@@ -58,6 +56,7 @@
 					          });
 					          
 					        });
+				});
 		        </script>
 		
 
