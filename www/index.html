@@ -114,7 +114,9 @@
        { 
 		if($.mobile.activePage.is('#homepage')){	  	
         		navigator.app.exitApp();
-		}
+		}else {
+        		navigator.app.backHistory()
+    		}
 
         }
  	  	
