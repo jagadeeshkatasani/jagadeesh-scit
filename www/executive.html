@@ -34,8 +34,11 @@
 		</div>
 			
 			<script>
+			$(document).ready(function(){
+				$('#images').text('Loading data ...');
 					$.getJSON("http://evonixtech.com/ColegSCIT/getmba.php",
 					        function(data){
+					        	$('#images').empty();
 					          // alert("data :"+data);
 					           var linkid=1;
 					          $.each(data.mba, function(i,item){
@@ -49,6 +52,7 @@
 					          });
 					           
 					        });
+				});	
 
 		        </script>
 				
