@@ -33,7 +33,8 @@
 		</div>
 <!-- 		<div id="loading" style='position:absolute;left:10px;top:150px;font-size:15px;'>Please wait...</div> -->
 			<script>
-			
+			$(document).ready(function(){
+				$('#images').text('Loading data...');
 					$.getJSON("http://evonixtech.com/ColegSCIT/getlistmenuimage.php",
 					        function(data){
 					          // alert("data :"+data);
@@ -50,8 +51,8 @@
 					          
 					          //$("#loading").hide();
 					        }); 
-										        
-		        </script>
+				});						        
+		     </script>
 		
 		
 
