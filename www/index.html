@@ -102,6 +102,20 @@
 	<link rel="stylesheet" href="jquery.mobile-1.2.0.min.css">
 	<script src="phonegap.js"></script>
 	<script src="childbrowser.js"></script>
+	<script>
+		document.addEventListener("deviceready", onDeviceReady, false);
+    		function onDeviceReady()
+    		{
+        		// Add event listener to the back button
+        		document.addEventListener("backbutton", backButtonHandler, false);
+    		}
+ 
+    		function backButtonHandler(e )
+   		{
+   			navigator.app.exitApp();
+ 
+     		}
+	</script>
 	
 	
 
