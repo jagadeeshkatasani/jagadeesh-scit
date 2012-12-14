@@ -77,9 +77,7 @@
 		#beer .ui-icon { background:  url(res/footermenu/btsharebar.png) 50% 50% no-repeat;  background-size: 22px 20px;background-color:none;}	
 		.links{color:white;font-weight:bold;text-decoration:none;}
 		.footer_bg{background-image:url('res/footermenu/footerbg.png');height:50px;}
-		.ui-page {
-	    -webkit-backface-visibility: hidden;
-		}
+		
 	</style>
 	<div data-role="footer" data-position="fixed" class="footer_bg" data-theme="h">
 		<div data-role="navbar" class="nav-glyphish-example" data-grid="d">
@@ -102,21 +100,6 @@
 	<link rel="stylesheet" href="jquery.mobile-1.2.0.min.css">
 	<script src="phonegap.js"></script>
 	<script src="childbrowser.js"></script>
-	<script>
-		document.addEventListener("deviceready", onDeviceReady, false);
-    		function onDeviceReady()
-    		{
-        		// Add event listener to the back button
-        		document.addEventListener("backbutton", backButtonHandler, false);
-    		}
- 
-    		function backButtonHandler(e )
-   		{
-   			navigator.app.exitApp();
- 
-     		}
-	</script>
-	
 	
 
 </div><!-- /page -->
